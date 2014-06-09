@@ -11,6 +11,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
 
 @Mod(modid = "ExampleModID", name = "ExampleMod", version = "1.0.0")
@@ -20,6 +21,7 @@ public class CaesarMod {
     private final static Item swordItem = new SwordItem(1);
     private final static Item wandMinerItem = new WandMinerItem(2);
     private final static Block swordBlock = new SwordBlock(2500, Material.cactus);
+    private final static Block bigGravel = new BigGravel(2501, MaterialLogic.sand);
 
     @SidedProxy(clientSide = "tutorial.minecraft.ClientProxy", serverSide = "tutorial.minecraft.CommonProxy")
     public static CommonProxy proxy;
@@ -32,6 +34,7 @@ public class CaesarMod {
         GameRegistry.registerItem(swordItem, swordItem.getUnlocalizedName());
         GameRegistry.registerItem(wandMinerItem, wandMinerItem.getUnlocalizedName());
         GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
+        GameRegistry.registerBlock(bigGravel, "Big Gravel Block");
     }
 
     @EventHandler
