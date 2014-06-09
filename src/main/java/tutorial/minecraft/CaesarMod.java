@@ -12,8 +12,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = "ExampleModID", name = "ExampleMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)
@@ -34,10 +32,6 @@ public class CaesarMod {
         GameRegistry.registerItem(swordItem, swordItem.getUnlocalizedName());
         GameRegistry.registerItem(wandMinerItem, wandMinerItem.getUnlocalizedName());
         GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
-        MinecraftForge.setBlockHarvestLevel(swordBlock, "shovel", 0);
-        GameRegistry.addShapelessRecipe(new ItemStack(swordItem, 1), Item.coal);
-        GameRegistry.addShapelessRecipe(new ItemStack(swordBlock, 1), Item.coal, swordItem);
-        GameRegistry.addShapedRecipe(new ItemStack(wandMinerItem, 1), "xx", "xy", 'x', new ItemStack(Block.dirt), 'y', new ItemStack(swordBlock));
     }
 
     @EventHandler
