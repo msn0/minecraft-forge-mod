@@ -13,6 +13,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 
 @Mod(modid = "ExampleModID", name = "ExampleMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)
@@ -35,6 +37,7 @@ public class CaesarMod {
         GameRegistry.registerItem(wandMinerItem, wandMinerItem.getUnlocalizedName());
         GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
         GameRegistry.registerBlock(bigGravel, "Big Gravel Block");
+        FurnaceRecipes.smelting().addSmelting(Block.oreIron.blockID, 10,new ItemStack(Item.book,5),1f);
     }
 
     @EventHandler
