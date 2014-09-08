@@ -7,9 +7,10 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BigGravel extends Block {
     public BigGravel(int id, Material sand) {
         super(id, sand);
-        setHardness(10);
+        setHardness(10f);
         setStepSound(Block.soundGravelFootstep);
         setUnlocalizedName("Big Gravel Block");
         setCreativeTab(CreativeTabs.tabDecorations);
+        setTextureName("examplemod:bigGravel");
     }
 }

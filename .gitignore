@@ -4,3 +4,5 @@ eclipse/
 .gradle/
 .idea/
 minecraft-forge-mod.iml
+*.ipr
+*.iws

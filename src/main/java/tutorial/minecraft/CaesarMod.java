@@ -37,8 +37,9 @@ public class CaesarMod {
         GameRegistry.registerItem(wandMinerItem, wandMinerItem.getUnlocalizedName());
         GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
         GameRegistry.registerBlock(bigGravel, "Big Gravel Block");
-        FurnaceRecipes.smelting().addSmelting(Block.oreIron.blockID, 10,new ItemStack(Item.book,5),1f);
+//        FurnaceRecipes.smelting().addSmelting(Block.oreIron.blockID, 10, new ItemStack(Item.book, 5), 1f);
     }
+
 
     @EventHandler
     public void load(FMLInitializationEvent event) {
