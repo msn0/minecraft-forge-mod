@@ -24,6 +24,9 @@ public class CaesarMod {
     private final static Item wandMinerItem = new WandMinerItem(2);
     private final static Block swordBlock = new SwordBlock(2500, Material.cactus);
     private final static Block bigGravel = new BigGravel(2501, MaterialLogic.sand);
+    private final static Item unnamedAtomItem = new UnnamedAtomItem(22);
+    private final static Item lexiconBook = new LexiconBookItem(23);
+    private final static QuantumTab QUANTUM_TAB = new QuantumTab("Quantum Energy");
 
     @SidedProxy(clientSide = "tutorial.minecraft.ClientProxy", serverSide = "tutorial.minecraft.CommonProxy")
     public static CommonProxy proxy;
@@ -33,10 +36,13 @@ public class CaesarMod {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        unnamedAtomItem.setCreativeTab(QUANTUM_TAB);
         GameRegistry.registerItem(swordItem, swordItem.getUnlocalizedName());
         GameRegistry.registerItem(wandMinerItem, wandMinerItem.getUnlocalizedName());
         GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
         GameRegistry.registerBlock(bigGravel, "Big Gravel Block");
+        GameRegistry.registerItem(unnamedAtomItem, unnamedAtomItem.getUnlocalizedName());
+        GameRegistry.registerItem(lexiconBook, lexiconBook.getUnlocalizedName());
 //        FurnaceRecipes.smelting().addSmelting(Block.oreIron.blockID, 10, new ItemStack(Item.book, 5), 1f);
     }
 
