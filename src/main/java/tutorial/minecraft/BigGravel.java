@@ -10,7 +10,6 @@ public class BigGravel extends Block {
         setHardness(10f);
         setStepSound(Block.soundGravelFootstep);
         setUnlocalizedName("Big Gravel Block");
-        setCreativeTab(CreativeTabs.tabDecorations);
         setTextureName("examplemod:bigGravel");
     }
 }
