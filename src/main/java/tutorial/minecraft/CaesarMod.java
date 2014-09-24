@@ -10,44 +10,41 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import tutorial.minecraft.block.BigGravel;
-import tutorial.minecraft.block.SwordBlock;
-import tutorial.minecraft.item.BigFlintItem;
+import tutorial.minecraft.item.Sword;
+import tutorial.minecraft.item.BigFlint;
 import tutorial.minecraft.item.Electron;
-import tutorial.minecraft.item.HandCrusherItem;
-import tutorial.minecraft.item.HydrogenAtomItem;
-import tutorial.minecraft.item.LexiconBookItem;
-import tutorial.minecraft.item.NeutronItem;
-import tutorial.minecraft.item.OxygenAtomItem;
-import tutorial.minecraft.item.ParticleOfWaterItem;
-import tutorial.minecraft.item.ProtonItem;
-import tutorial.minecraft.item.SwordItem;
-import tutorial.minecraft.item.UnnamedAtomItem;
-import tutorial.minecraft.item.WandMinerItem;
+import tutorial.minecraft.item.HandCrusher;
+import tutorial.minecraft.item.HydrogenAtom;
+import tutorial.minecraft.item.LexiconBook;
+import tutorial.minecraft.item.Neutron;
+import tutorial.minecraft.item.OxygenAtom;
+import tutorial.minecraft.item.ParticleOfWater;
+import tutorial.minecraft.item.Proton;
+import tutorial.minecraft.item.UnnamedAtom;
+import tutorial.minecraft.item.WandMiner;
 
 @Mod(modid = "ExampleModID", name = "ExampleMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)
 public class CaesarMod {
 
-    private final static Item swordItem = new SwordItem(1111);
-    private final static Item wandMinerItem = new WandMinerItem(1112);
-    private final static Block swordBlock = new SwordBlock(2500, Material.cactus);
-    private final static Block bigGravel = new BigGravel(2501, MaterialLogic.sand);
-    private final static Item unnamedAtomItem = new UnnamedAtomItem(1122);
-    private final static Item lexiconBook = new LexiconBookItem(1123);
-    private final static QuantumTab QUANTUM_TAB = new QuantumTab("Quantum Energy");
-    public final static Item hydrogenAtomItem = new HydrogenAtomItem(1124);
-    public final static Item oxygenAtomItem = new OxygenAtomItem(1125);
-    public final static Item bigFlintItem = new BigFlintItem(1126);
-    public final static Item protonItem = new ProtonItem(1127);
-    public final static Item neutronItem = new NeutronItem(1128);
-    public final static Item handCrusherItem = new HandCrusherItem(1129);
-    public final static Item electronItem = new Electron(1130);
-    public final static Item particleOfWaterItem = new ParticleOfWaterItem(1131);
+    private final static QuantumTab quantumTab = new QuantumTab("Quantum Energy");
+    private final static Block bigGravel = new BigGravel(2048, MaterialLogic.sand);
+    private final static Item sword = new Sword(2049);
+    private final static Item wandMiner = new WandMiner(2050);
+    private final static Item unnamedAtom = new UnnamedAtom(2051);
+    private final static Item lexiconBook = new LexiconBook(2052);
+    private final static Item hydrogenAtom = new HydrogenAtom(2053);
+    private final static Item oxygenAtom = new OxygenAtom(2054);
+    private final static Item bigFlint = new BigFlint(2055);
+    private final static Item proton = new Proton(2056);
+    private final static Item neutron = new Neutron(2057);
+    private final static Item handCrusher = new HandCrusher(2058);
+    private final static Item electron = new Electron(2059);
+    private final static Item particleOfWater = new ParticleOfWater(2060);
 
 
     @SidedProxy(clientSide = "tutorial.minecraft.ClientProxy", serverSide = "tutorial.minecraft.CommonProxy")
@@ -58,34 +55,33 @@ public class CaesarMod {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        bigGravel.setCreativeTab(QUANTUM_TAB);
-        unnamedAtomItem.setCreativeTab(QUANTUM_TAB);
-        hydrogenAtomItem.setCreativeTab(QUANTUM_TAB);
-        oxygenAtomItem.setCreativeTab(QUANTUM_TAB);
-        bigFlintItem.setCreativeTab(QUANTUM_TAB);
-        protonItem.setCreativeTab(QUANTUM_TAB);
-        neutronItem.setCreativeTab(QUANTUM_TAB);
-        handCrusherItem.setCreativeTab(QUANTUM_TAB);
-        electronItem.setCreativeTab(QUANTUM_TAB);
-        particleOfWaterItem.setCreativeTab(QUANTUM_TAB);
+        bigGravel.setCreativeTab(quantumTab);
+        unnamedAtom.setCreativeTab(quantumTab);
+        hydrogenAtom.setCreativeTab(quantumTab);
+        oxygenAtom.setCreativeTab(quantumTab);
+        bigFlint.setCreativeTab(quantumTab);
+        proton.setCreativeTab(quantumTab);
+        neutron.setCreativeTab(quantumTab);
+        handCrusher.setCreativeTab(quantumTab);
+        electron.setCreativeTab(quantumTab);
+        particleOfWater.setCreativeTab(quantumTab);
 
-        GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
         GameRegistry.registerBlock(bigGravel, bigGravel.getUnlocalizedName());
-        GameRegistry.registerItem(swordItem, swordItem.getUnlocalizedName());
-        GameRegistry.registerItem(wandMinerItem, wandMinerItem.getUnlocalizedName());
-        GameRegistry.registerItem(unnamedAtomItem, unnamedAtomItem.getUnlocalizedName());
+        GameRegistry.registerItem(sword, sword.getUnlocalizedName());
+        GameRegistry.registerItem(wandMiner, wandMiner.getUnlocalizedName());
+        GameRegistry.registerItem(unnamedAtom, unnamedAtom.getUnlocalizedName());
         GameRegistry.registerItem(lexiconBook, lexiconBook.getUnlocalizedName());
-        GameRegistry.registerItem(hydrogenAtomItem, hydrogenAtomItem.getUnlocalizedName());
-        GameRegistry.registerItem(oxygenAtomItem, oxygenAtomItem.getUnlocalizedName());
-        GameRegistry.registerItem(bigFlintItem, bigFlintItem.getUnlocalizedName());
-        GameRegistry.registerItem(protonItem, protonItem.getUnlocalizedName());
-        GameRegistry.registerItem(neutronItem, neutronItem.getUnlocalizedName());
-        GameRegistry.registerItem(handCrusherItem, handCrusherItem.getUnlocalizedName());
-        GameRegistry.registerItem(electronItem, electronItem.getUnlocalizedName());
-        GameRegistry.registerItem(particleOfWaterItem, particleOfWaterItem.getUnlocalizedName());
+        GameRegistry.registerItem(hydrogenAtom, hydrogenAtom.getUnlocalizedName());
+        GameRegistry.registerItem(oxygenAtom, oxygenAtom.getUnlocalizedName());
+        GameRegistry.registerItem(bigFlint, bigFlint.getUnlocalizedName());
+        GameRegistry.registerItem(proton, proton.getUnlocalizedName());
+        GameRegistry.registerItem(neutron, neutron.getUnlocalizedName());
+        GameRegistry.registerItem(handCrusher, handCrusher.getUnlocalizedName());
+        GameRegistry.registerItem(electron, electron.getUnlocalizedName());
+        GameRegistry.registerItem(particleOfWater, particleOfWater.getUnlocalizedName());
 
-        GameRegistry.addShapelessRecipe(new ItemStack(Item.bucketWater), hydrogenAtomItem, hydrogenAtomItem, hydrogenAtomItem);
-        GameRegistry.addShapedRecipe(new ItemStack(hydrogenAtomItem), "   ", " x ", "y  ", 'x', protonItem, 'y', electronItem);
+        GameRegistry.addShapelessRecipe(new ItemStack(Item.bucketWater), hydrogenAtom, hydrogenAtom, hydrogenAtom);
+        GameRegistry.addShapedRecipe(new ItemStack(hydrogenAtom), "   ", " x ", "y  ", 'x', proton, 'y', electron);
     }
 
 
