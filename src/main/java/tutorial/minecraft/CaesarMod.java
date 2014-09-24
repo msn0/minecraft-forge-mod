@@ -83,6 +83,9 @@ public class CaesarMod {
         GameRegistry.registerItem(handCrusherItem, handCrusherItem.getUnlocalizedName());
         GameRegistry.registerItem(electronItem, electronItem.getUnlocalizedName());
         GameRegistry.registerItem(particleOfWaterItem, particleOfWaterItem.getUnlocalizedName());
+
+        GameRegistry.addShapelessRecipe(new ItemStack(Item.bucketWater), hydrogenAtomItem, hydrogenAtomItem, hydrogenAtomItem);
+        GameRegistry.addShapedRecipe(new ItemStack(hydrogenAtomItem), "   ", " x ", "y  ", 'x', protonItem, 'y', electronItem);
     }
 
 
