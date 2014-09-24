@@ -1,8 +1,7 @@
-package tutorial.minecraft;
+package tutorial.minecraft.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class BigGravel extends Block {
     public BigGravel(int id, Material sand) {

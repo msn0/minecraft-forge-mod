@@ -1,13 +1,11 @@
-package tutorial.minecraft;
+package tutorial.minecraft.item;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class HydrogenAtomItem extends Item {
-    public HydrogenAtomItem(int par1){
+    public HydrogenAtomItem(int par1) {
         super(par1);
         setTextureName("examplemod:HydrogenAtom");
         setUnlocalizedName("Hydrogen Atom");
-        }
-        
     }
+}

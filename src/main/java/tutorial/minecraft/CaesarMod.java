@@ -13,6 +13,21 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import tutorial.minecraft.block.BigGravel;
+import tutorial.minecraft.block.SwordBlock;
+import tutorial.minecraft.item.BigFlintItem;
+import tutorial.minecraft.item.Electron;
+import tutorial.minecraft.item.HandCrusherItem;
+import tutorial.minecraft.item.HydrogenAtomItem;
+import tutorial.minecraft.item.LexiconBookItem;
+import tutorial.minecraft.item.NeutronItem;
+import tutorial.minecraft.item.OxygenAtomItem;
+import tutorial.minecraft.item.ParticleOfWaterItem;
+import tutorial.minecraft.item.ProtonItem;
+import tutorial.minecraft.item.SwordItem;
+import tutorial.minecraft.item.UnnamedAtomItem;
+import tutorial.minecraft.item.WandMinerItem;
 
 @Mod(modid = "ExampleModID", name = "ExampleMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)
@@ -54,7 +69,6 @@ public class CaesarMod {
         electronItem.setCreativeTab(QUANTUM_TAB);
         particleOfWaterItem.setCreativeTab(QUANTUM_TAB);
 
-
         GameRegistry.registerBlock(swordBlock, swordBlock.getUnlocalizedName());
         GameRegistry.registerBlock(bigGravel, bigGravel.getUnlocalizedName());
         GameRegistry.registerItem(swordItem, swordItem.getUnlocalizedName());
@@ -69,7 +83,6 @@ public class CaesarMod {
         GameRegistry.registerItem(handCrusherItem, handCrusherItem.getUnlocalizedName());
         GameRegistry.registerItem(electronItem, electronItem.getUnlocalizedName());
         GameRegistry.registerItem(particleOfWaterItem, particleOfWaterItem.getUnlocalizedName());
-//        FurnaceRecipes.smelting().addSmelting(Block.oreIron.blockID, 10, new ItemStack(Item.book, 5), 1f);
     }
 
 

@@ -1,6 +1,5 @@
-package tutorial.minecraft;
+package tutorial.minecraft.item;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class UnnamedAtomItem extends Item {
@@ -9,5 +8,4 @@ public class UnnamedAtomItem extends Item {
         setTextureName("examplemod:unnamedAtom");
         setUnlocalizedName("Unnamed Atom");
     }
-
 }
