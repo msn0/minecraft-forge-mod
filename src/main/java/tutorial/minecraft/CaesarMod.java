@@ -27,7 +27,7 @@ import tutorial.minecraft.item.Proton;
 import tutorial.minecraft.item.UnnamedAtom;
 import tutorial.minecraft.item.WandMiner;
 
-@Mod(modid = "ExampleModID", name = "ExampleMod", version = "1.0.0")
+@Mod(modid = "CaesarModID", name = "CaesarMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)
 public class CaesarMod {
 
