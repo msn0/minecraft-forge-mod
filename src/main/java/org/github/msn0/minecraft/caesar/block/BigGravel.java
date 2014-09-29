@@ -1,4 +1,4 @@
-package tutorial.minecraft.block;
+package org.github.msn0.minecraft.caesar.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -9,6 +9,6 @@ public class BigGravel extends Block {
         setHardness(10f);
         setStepSound(Block.soundGravelFootstep);
         setUnlocalizedName("Big Gravel Block");
-        setTextureName("examplemod:bigGravel");
+        setTextureName("caesar:bigGravel");
     }
 }

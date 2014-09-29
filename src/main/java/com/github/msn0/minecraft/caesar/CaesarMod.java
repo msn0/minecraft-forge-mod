@@ -1,4 +1,4 @@
-package tutorial.minecraft;
+package com.github.msn0.minecraft.caesar;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -13,19 +13,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import tutorial.minecraft.block.BigGravel;
-import tutorial.minecraft.item.Sword;
-import tutorial.minecraft.item.BigFlint;
-import tutorial.minecraft.item.Electron;
-import tutorial.minecraft.item.HandCrusher;
-import tutorial.minecraft.item.HydrogenAtom;
-import tutorial.minecraft.item.LexiconBook;
-import tutorial.minecraft.item.Neutron;
-import tutorial.minecraft.item.OxygenAtom;
-import tutorial.minecraft.item.ParticleOfWater;
-import tutorial.minecraft.item.Proton;
-import tutorial.minecraft.item.UnnamedAtom;
-import tutorial.minecraft.item.WandMiner;
+import org.github.msn0.minecraft.caesar.block.BigGravel;
+import org.github.msn0.minecraft.caesar.item.BigFlint;
+import org.github.msn0.minecraft.caesar.item.Electron;
+import org.github.msn0.minecraft.caesar.item.HandCrusher;
+import org.github.msn0.minecraft.caesar.item.HydrogenAtom;
+import org.github.msn0.minecraft.caesar.item.LexiconBook;
+import org.github.msn0.minecraft.caesar.item.Neutron;
+import org.github.msn0.minecraft.caesar.item.OxygenAtom;
+import org.github.msn0.minecraft.caesar.item.ParticleOfWater;
+import org.github.msn0.minecraft.caesar.item.Proton;
+import org.github.msn0.minecraft.caesar.item.Sword;
+import org.github.msn0.minecraft.caesar.item.UnnamedAtom;
+import org.github.msn0.minecraft.caesar.item.WandMiner;
 
 @Mod(modid = "CaesarModID", name = "CaesarMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)
@@ -47,10 +47,13 @@ public class CaesarMod {
     private final static Item particleOfWater = new ParticleOfWater(2060);
 
 
-    @SidedProxy(clientSide = "tutorial.minecraft.ClientProxy", serverSide = "tutorial.minecraft.CommonProxy")
+    @SidedProxy(
+            clientSide = "com.github.msn0.minecraft.caesar.ClientProxy",
+            serverSide = "com.github.msn0.minecraft.caesar.CommonProxy"
+    )
     public static CommonProxy proxy;
 
-    @Instance(value = "ExampleModID")
+    @Instance(value = "CaesarModID")
     public static CaesarMod instance;
 
     @EventHandler
@@ -80,8 +83,20 @@ public class CaesarMod {
         GameRegistry.registerItem(electron, electron.getUnlocalizedName());
         GameRegistry.registerItem(particleOfWater, particleOfWater.getUnlocalizedName());
 
-        GameRegistry.addShapelessRecipe(new ItemStack(Item.bucketWater), particleOfWater, particleOfWater, particleOfWater, particleOfWater);
-        GameRegistry.addShapedRecipe(new ItemStack(hydrogenAtom), "   ", " x ", "y  ", 'x', proton, 'y', electron);
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(Item.bucketWater),
+                particleOfWater,
+                particleOfWater,
+                particleOfWater,
+                particleOfWater);
+
+        GameRegistry.addShapedRecipe(
+                new ItemStack(hydrogenAtom),
+                "   ",
+                " x ",
+                "y  ",
+                'x', proton,
+                'y', electron);
     }
 
 

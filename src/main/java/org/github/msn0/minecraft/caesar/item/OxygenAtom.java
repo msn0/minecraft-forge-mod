@@ -1,11 +1,11 @@
-package tutorial.minecraft.item;
+package org.github.msn0.minecraft.caesar.item;
 
 import net.minecraft.item.Item;
 
 public class OxygenAtom extends Item {
     public OxygenAtom(int par1) {
         super(par1);
-        setTextureName("examplemod:OxygenAtom");
+        setTextureName("caesar:OxygenAtom");
         setUnlocalizedName("Oxygen Atom");
     }
 }

@@ -1,4 +1,4 @@
-package tutorial.minecraft.item;
+package org.github.msn0.minecraft.caesar.item;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -9,7 +9,7 @@ public class WandMiner extends Item {
         setUnlocalizedName("Miner Wand");
         setMaxStackSize(512);
         setCreativeTab(CreativeTabs.tabTools);
-        setTextureName("examplemod:wandMinerItem");
+        setTextureName("caesar:wandMinerItem");
         setMaxDamage(100000);
     }
 }

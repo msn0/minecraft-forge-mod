@@ -1,4 +1,4 @@
-package tutorial.minecraft;
+package com.github.msn0.minecraft.caesar;
 
 public class ClientProxy extends CommonProxy {
 
