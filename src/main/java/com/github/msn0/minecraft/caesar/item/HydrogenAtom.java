@@ -1,4 +1,4 @@
-package org.github.msn0.minecraft.caesar.item;
+package com.github.msn0.minecraft.caesar.item;
 
 import net.minecraft.item.Item;
 

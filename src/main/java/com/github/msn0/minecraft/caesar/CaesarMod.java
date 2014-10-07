@@ -13,19 +13,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import org.github.msn0.minecraft.caesar.block.BigGravel;
-import org.github.msn0.minecraft.caesar.item.BigFlint;
-import org.github.msn0.minecraft.caesar.item.Electron;
-import org.github.msn0.minecraft.caesar.item.HandCrusher;
-import org.github.msn0.minecraft.caesar.item.HydrogenAtom;
-import org.github.msn0.minecraft.caesar.item.LexiconBook;
-import org.github.msn0.minecraft.caesar.item.Neutron;
-import org.github.msn0.minecraft.caesar.item.OxygenAtom;
-import org.github.msn0.minecraft.caesar.item.ParticleOfWater;
-import org.github.msn0.minecraft.caesar.item.Proton;
-import org.github.msn0.minecraft.caesar.item.Sword;
-import org.github.msn0.minecraft.caesar.item.UnnamedAtom;
-import org.github.msn0.minecraft.caesar.item.WandMiner;
+import com.github.msn0.minecraft.caesar.block.BigGravel;
+import com.github.msn0.minecraft.caesar.item.BigFlint;
+import com.github.msn0.minecraft.caesar.item.Electron;
+import com.github.msn0.minecraft.caesar.item.HandCrusher;
+import com.github.msn0.minecraft.caesar.item.HydrogenAtom;
+import com.github.msn0.minecraft.caesar.item.LexiconBook;
+import com.github.msn0.minecraft.caesar.item.Neutron;
+import com.github.msn0.minecraft.caesar.item.OxygenAtom;
+import com.github.msn0.minecraft.caesar.item.ParticleOfWater;
+import com.github.msn0.minecraft.caesar.item.Proton;
+import com.github.msn0.minecraft.caesar.item.Sword;
+import com.github.msn0.minecraft.caesar.item.UnnamedAtom;
+import com.github.msn0.minecraft.caesar.item.WandMiner;
 
 @Mod(modid = "CaesarModID", name = "CaesarMod", version = "1.0.0")
 @NetworkMod(clientSideRequired = true)

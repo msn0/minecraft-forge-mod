@@ -1,4 +1,4 @@
-package org.github.msn0.minecraft.caesar.block;
+package com.github.msn0.minecraft.caesar.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
